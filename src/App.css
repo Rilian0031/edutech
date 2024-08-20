@@ -1,0 +1,230 @@
+/* app.css */
+
+*, html, body{
+  scroll-behavior: smooth;
+} 
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  /*background: linear-gradient(to right, #4CAF50, #2e8b57);*/ /* Gradient for visual appeal */
+  color: white;
+  padding: 12px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffeb3b; /* Yellow hover effect */
+}
+
+.navbar-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+}
+
+.navbar-links .dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links .dropdown-content a:hover {
+  background-color: #f0f0f0; /* Light gray hover effect */
+}
+
+.navbar-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sidebar {
+  width: 256px; /* Adjust width for better alignment */
+  background-color: #2e8b57; /* Match with navbar gradient */
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 60px; /* Adjust based on navbar height */
+  left: 0;
+  height: calc(100vh - 60px); /* Full height minus navbar */
+  overflow-y: auto; /* Scrollbar for long content */
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a,
+.sidebar ul li button {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li button:hover {
+  background-color: #4CAF50; /* Darker green on hover */
+  color: #fff; /* Ensure text remains white on hover */
+}
+
+.main-content {
+  /* margin-left: 256px; Align with sidebar width */
+  padding: 20px;
+}
+
+.course-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.03); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.error {
+  text-align: center;
+  padding: 50px;
+}
+
+/* ChatComponent styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 20px auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.messages {
+  padding: 20px;
+  height: 400px; /* Adjust height as needed */
+  overflow-y: auto;
+  background: #f4f4f4;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+
+.message.user {
+  background: #4CAF50; /* Green background for user messages */
+  color: white;
+  align-self: flex-end;
+}
+
+.message.ai {
+  background: #e0e0e0; /* Gray background for AI messages */
+  color: #333;
+  align-self: flex-start;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.chat-input button {
+  background: #4CAF50; /* Green button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: #388E3C; /* Darker green on hover */
+}
