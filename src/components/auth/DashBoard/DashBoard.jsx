@@ -1,26 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Assignments from './Assignments'; // Import the Assignments component
-import Grades from './Grades'; // Import the Grades component
-import { getCourse } from '../../../apis';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Assignments from "./Assignments"; // Import the Assignments component
+import Grades from "./Grades"; // Import the Grades component
+import { getCourse } from "../../../apis";
 
 function Dashboard() {
-  const [activeSection, setActiveSection] = useState('overview');
-  const [courses, setCourses] = useState([]); 
+  const [activeSection, setActiveSection] = useState("overview");
+  const [courses, setCourses] = useState([]);
   useEffect(() => {
-    async function fetchCoursesOnDashboard () {
-      const coursesResult = getCourse()
-      setCourses(coursesResult.data.data)
+    async function fetchCoursesOnDashboard() {
+      const coursesResult = getCourse();
+      setCourses(coursesResult.data.data);
     }
-    fetchCoursesOnDashboard()
-  }, [])
-  
+    fetchCoursesOnDashboard();
+  }, []);
 
   const renderContent = () => {
     switch (activeSection) {
-      case 'assignments':
+      case "assignments":
         return <Assignments />;
-      case 'grades':
+      case "grades":
         return <Grades />;
       // Add more cases as needed
       default:
@@ -30,9 +29,7 @@ function Dashboard() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div className="bg-gradient-to-r from-blue-400 to-blue-600 text-white p-4 rounded-lg shadow-md">
                 <h2 className="text-xl font-bold">Courses Enrolled</h2>
-                <p className="text-4xl mt-4 font-extrabold">
-                  {courses.length}
-                </p>
+                <p className="text-4xl mt-4 font-extrabold">{courses.length}</p>
               </div>
               <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white p-4 rounded-lg shadow-md">
                 <h2 className="text-xl font-bold">Assignments Due</h2>
@@ -86,10 +83,14 @@ function Dashboard() {
             <div className="bg-white p-6 rounded-lg shadow-md mb-6">
               <h2 className="text-2xl font-bold mb-4">Announcements</h2>
               <p>
-                Midterm exams will start from September 10th. Please check your schedule for exam timings.{' '}
-                <Link to="/dashboard/schedule" className="text-blue-500 hover:underline">
+                Midterm exams will start from September 10th. Please check your
+                schedule for exam timings.{" "}
+                <Link
+                  to="/dashboard/schedule"
+                  className="text-blue-500 hover:underline"
+                >
                   View Schedule
-                </Link>.
+                </Link>
               </p>
             </div>
 
@@ -122,26 +123,39 @@ function Dashboard() {
 
   return (
     <div className="dashboard p-6 ml-64">
-      <h1 className="text-4xl font-bold mb-6">Welcome Back, [Jane]!</h1>
+      <h1 className="text-4xl font-bold mb-6">Welcome Back, Jane!</h1>
 
       <nav className="mb-6">
         <ul className="flex space-x-4">
           <li className="p-2">
-            <button onClick={() => setActiveSection('overview')} className="hover:text-yellow-400">Overview</button>
+            <button
+              onClick={() => setActiveSection("overview")}
+              className="hover:text-yellow-400"
+            >
+              Overview
+            </button>
           </li>
           <li className="p-2">
-            <button onClick={() => setActiveSection('assignments')} className="hover:text-yellow-400">Assignments</button>
+            <button
+              onClick={() => setActiveSection("assignments")}
+              className="hover:text-yellow-400"
+            >
+              Assignments
+            </button>
           </li>
           <li className="p-2">
-            <button onClick={() => setActiveSection('grades')} className="hover:text-yellow-400">Grades</button>
+            <button
+              onClick={() => setActiveSection("grades")}
+              className="hover:text-yellow-400"
+            >
+              Grades
+            </button>
           </li>
           {/* Add more buttons as needed */}
         </ul>
       </nav>
 
-      <div className="content">
-        {renderContent()}
-      </div>
+      <div className="content">{renderContent()}</div>
     </div>
   );
 }
