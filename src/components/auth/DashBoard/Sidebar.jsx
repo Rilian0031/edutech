@@ -7,8 +7,8 @@ function Sidebar() {
       <h2 className="text-2xl font-bold p-4">School Dashboard</h2>
       <ul className="mt-4">
         <li className="p-2 hover:bg-green-500 rounded transition-colors">
-          <Link to="/overview" className="block text-white hover:text-yellow-400">
-            Overview
+          <Link to=" " className="block text-white hover:text-yellow-400">
+            
           </Link>
         </li>
         <li className="p-2 hover:bg-green-500 rounded transition-colors">
@@ -38,7 +38,7 @@ function Sidebar() {
         </li>
         <li className="p-2 hover:bg-green-500 rounded transition-colors">
           <Link to="/settings" className="block text-white hover:text-yellow-400">
-            Settings
+            
           </Link>
         </li>
       </ul>

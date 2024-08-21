@@ -122,7 +122,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard p-6 ml-64">
-      <h1 className="text-4xl font-bold mb-6">Welcome Back, [Student Name]!</h1>
+      <h1 className="text-4xl font-bold mb-6">Welcome Back, [Jane]!</h1>
 
       <nav className="mb-6">
         <ul className="flex space-x-4">

@@ -20,7 +20,7 @@ const courses = [
 function Courses() {
   return (
     <div className="courses p-6">
-      <h1 className="text-4xl font-bold mb-8">Our Courses</h1>
+      <h1 className="text-4xl font-bold mb-8 text">Our Courses</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map(course => (
           <div key={course.id} className="course-card bg-white rounded-lg shadow-md p-4">

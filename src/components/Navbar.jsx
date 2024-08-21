@@ -21,7 +21,7 @@ function Navbar() {
           </li> */}
           <li className="relative group">
             <a href="#" className="hover:text-yellow-400">Pages</a>
-            <div className="dropdown-content absolute hidden bg-white text-gray-800 shadow-md mt-2 group-hover:block">
+            <div className="dropdown-content absolute hidden bg-white text-gray-800 shadow-md mt-0 group-hover:block">
               {/* <Link to="/events" className="block p-2 hover:bg-gray-200">Event</Link>
               <Link to="/event-details" className="block p-2 hover:bg-gray-200">Event Details</Link> */}
               <a href="/#instructors" className="block p-2 hover:bg-gray-200">Instructors</a>

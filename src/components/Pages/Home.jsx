@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import course1 from '../../assets/images/course1.jpg';
 import course2 from '../../assets/images/course2.jpg';
 import course3 from '../../assets/images/course3.jpg';
-import school from '../../assets/images/school.jpg';
+import school1 from '../../assets/images/school1.jpeg';
 import instructor1 from '../../assets/images/instructor1.jpg'; 
 import instructor2 from '../../assets/images/instructor2.jpg';
 import instructor3 from '../../assets/images/instructor3.jpg';
@@ -20,17 +20,17 @@ function Home() {
   return (
     <>
       <Navbar/>
-      <div className="mt-12 p-8 bg-gray-100 min-h-screen">
+      <div className=" bg-gray-100 min-h-screen">
       {/* Header Section */}
       <header
-        className="min-h-screen bg-cover bg-no-repeat mb-32 rounded-lg"
-        style={{ backgroundImage: `url(${school})` }}
+        className="h-fit bg-cover bg-no-repeat  rounded-lg"
+        style={{ backgroundImage: `url(${school1})` }}
       >
         <div className="text-center py-64 bg-opacity-30 bg-gray-800">
           <h1 className="text-5xl font-extrabold text-gray-200 mb-4 max-w-3xl mx-auto">
             Welcome to EduGenius Hub
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-white max-w-2xl mx-auto">
             Your one-stop solution for online learning. Explore our diverse range of courses and start your educational journey today.
           </p>
         </div>
@@ -39,8 +39,8 @@ function Home() {
       {/* About Section */}
       <section id="about">
         <div className="p-8">
-          <h1 className="text-4xl font-bold mb-4">About EduGenius Platform</h1>
-          <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-200 to-green-500">
+          <h1 className="text-4xl font-bold mb-4 text-center t">About EduGenius Platform</h1>
+          <div className="flex justify-center items-center min-h-screen bg-gradient-to-r bg-white">
       <div className="max-w-4xl p-12 bg-white shadow-xl rounded-lg">
      
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -62,7 +62,7 @@ function Home() {
 
       {/* Features Section */}
       <section>
-        <h1 id="courses" className="text-2xl text-center font-semibold text-gray-700 my-12 max-w-3xl mx-auto uppercase">
+        <h1 id="courses" className="text-4xl text-center font-bold text-black my-12 max-w-3xl mx-auto uppercase">
           Courses
         </h1>
         <div className="course-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,7 +97,8 @@ function Home() {
 
       {/* Instructors Section */}
       <section className="py-8">
-        <h1 id="instructors" className="text-2xl text-center font-semibold text-gray-700 mb-8">Meet Our Instructors</h1>
+        <h1 id="instructors" className="text-4xl text-center font-bold text-black
+         mb-8">Meet Our Instructors</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="instructor-card bg-white p-6 rounded-lg shadow-lg">
             <img src={instructor1} alt="Instructor 1" className="rounded-full mb-4 h-40 w-40 object-cover mx-auto" />
