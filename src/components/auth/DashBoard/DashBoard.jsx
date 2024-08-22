@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Assignments from "./Assignments"; // Import the Assignments component
-import Grades from "./Grades"; // Import the Grades component
+import Assignments from "./Assignments"; 
+import Grades from "./Grades"; 
 import { getCourse } from "../../../apis";
 
 function Dashboard() {
@@ -9,7 +9,7 @@ function Dashboard() {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     async function fetchCoursesOnDashboard() {
-      const coursesResult = getCourse();
+      const coursesResult = await getCourse(); // await added
       setCourses(coursesResult.data.data);
     }
     fetchCoursesOnDashboard();
@@ -21,7 +21,6 @@ function Dashboard() {
         return <Assignments />;
       case "grades":
         return <Grades />;
-      // Add more cases as needed
       default:
         return (
           <>
@@ -123,7 +122,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard p-6 ml-64">
-      <h1 className="text-4xl font-bold mb-6">Welcome Back,Jane!</h1>
+      <h1 className="text-4xl font-bold mb-6">Welcome Back, Jane!</h1>
 
       <nav className="mb-6">
         <ul className="flex space-x-4">
@@ -151,7 +150,6 @@ function Dashboard() {
               Grades
             </button>
           </li>
-          {/* Add more buttons as needed */}
         </ul>
       </nav>
 
