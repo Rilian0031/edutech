@@ -24,6 +24,7 @@ function Dashboard() {
       default:
         return (
           <>
+          
             {/* Stats Section */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div className="bg-gradient-to-r from-blue-400 to-blue-600 text-white p-4 rounded-lg shadow-md">
